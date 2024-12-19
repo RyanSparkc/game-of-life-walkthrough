@@ -1,100 +1,64 @@
-# Build Conway's Game of Life with GitHub Copilot
+# 康威生命遊戲實作
 
-This repository contains a companion walkthrough to the video on
-[Using GitHub Copilot to create Conway's Game of Life][youtube-video].
-You can follow the steps in this repository to achieve a similar result to the video.
+這是一個使用 HTML5 Canvas 實作的康威生命遊戲。專案採用現代化的前端技術，並遵循良好的程式碼組織原則。
 
-In this tutorial, we'll build Conway's Game of Life from scratch using GitHub Copilot
-as our pair programming assistant. This simulation demonstrates how complex patterns
-can emerge from simple rules, making it an interesting project for learning both
-programming concepts and GitHub Copilot's capabilities.
+[線上展示](https://your-username.github.io/game-of-life-walkthrough)
 
-## Getting Started
+## 功能特色
 
-Before you get started, make sure you have the following:
+- 完整實作康威生命遊戲規則
+- 互動式控制面板
+- 視覺化的細胞狀態顯示
+- 回應式設計
 
-- [A GitHub account][github-signup]
-- [A GitHub Copilot subscription (or trial)][github-copilot]
-- [Visual Studio Code][visual-studio-code] with the [GitHub Codespaces
-  extension][visual-studio-code-codespaces] installed
+## 技術實作
 
-### Create a New Repository
+- 純 JavaScript 類別架構
+- HTML5 Canvas 繪圖
+- CSS 變數和模組化樣式
+- 無障礙設計支援
 
-To get started, you need to [create a fork of this repository][repo-fork].
-Follow these steps:
+## 本地開發
 
-1. Click the `Fork` button on this repository page.
+1. 克隆專案:
 
-    ![Click the use this template button](docs/images/0-fork-repo-step-1.jpg)
+```bash
+git clone https://github.com/your-username/game-of-life-walkthrough.git
+```
 
-> [!NOTE]
-> This tutorial contains steps to publish your code to GitHub Pages. If you want
-> to follow along with this part, then you should either make your repository public
-> or make sure you have access to a plan that allows private repositories to be
-> published to GitHub Pages.
+2. 使用任何網頁伺服器啟動專案:
 
-1. Fill in the repository name and description, and click the `Create fork` button.
+```bash
+# 例如使用 Python 的簡易伺服器
+python -m http.server
+```
 
-    ![Create the repository](docs/images/0-fork-repo-step-2.jpg)
+3. 瀏覽 `http://localhost:8000` 檢視結果
 
-### Set Up your Development Environment
+## 專案結構
 
-Now that you have your repository set up, you need to set up your development
-environment. We'll use [Visual Studio Code][visual-studio-code] and
-[GitHub Codespaces][visual-studio-code-codespaces] for this tutorial.
+```
+.
+├── index.html      # 主要 HTML 檔案
+├── styles.css      # 樣式定義
+├── script.js       # 遊戲邏輯實作
+└── docs/          # 專案文件
+```
 
-1. Open Visual Studio Code and install the
-   [GitHub Codespaces extension][visual-studio-code-codespaces] if you haven't already.
+## 參與貢獻
 
-2. Sign in to your GitHub account in Visual Studio Code.
+歡迎透過以下方式參與:
 
-3. Open the Command Palette:
-    - On Windows / Linux: <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd>
-    - On macOS: <kbd>Cmd</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd>
+1. Fork 本專案
+2. 建立您的特性分支 (`git checkout -b feature/AmazingFeature`)
+3. 提交變更 (`git commit -m 'Add some AmazingFeature'`)
+4. 推送到分支 (`git push origin feature/AmazingFeature`)
+5. 開啟 Pull Request
 
-4. Type `> Codespaces: Create New Codespace`, and select that option. 
+## 完整教學
 
-    ![Create a new Codespace through the Visual Studio Code command palette](docs/images/0-codespace-step-1.jpg)
+如果您想了解如何從頭開始建立這個專案，請參考 [walkthrough-README.md](walkthrough-README.md)。
 
-5. Type in the name of your repository (e.g. `mona/game-of-life-walkthrough`) and
-   select it from the list. After that, you will be asked to select an instance
-   type for your Codespace.
+## 授權
 
-    ![Type in the name of your newly forked repository and select it](docs/images/0-codespace-step-2.jpg)
-
-6. This will create a new Codespace for you. It may take a few moments to set up,
-   but once it's ready, you'll be able to see the code in your editor.
-
-    ![Click the Create codespace on main button](docs/images/0-codespace-step-3.jpg)
-
-### Next Steps
-
-Now that you have your development environment set up, proceed to
-[Getting Started with GitHub Copilot Chat](docs/1-copilot-chat.md) to begin
-exploring GitHub Copilot's capabilities.
-
-## Table of Contents
-
-1. [Copilot Chat](docs/1-copilot-chat.md)
-2. [Copilot Edits](docs/2-copilot-edits.md)
-3. [Copilot Instructions](docs/3-copilot-instructions.md)
-4. [Using Inline Chat and Slash Commands](docs/4-slash-commands.md)
-5. [README and Copilot Extensions](docs/5-readme-and-extensions.md)
-6. [GitHub Actions and GitHub Pages](docs/6-actions-and-pages.md)
-
-## License
-
-This project is licensed under the MIT License - see 
-the [LICENSE](LICENSE) file for details.
-
-## Contributing
-
-Found a mistake or want to suggest an improvement? Contributions are welcome!
-Submit a Pull Request.
-
-[github-copilot]: https://github.com/features/copilot
-[github-signup]: https://github.com/join
-[repo-fork]: https://github.com/github-samples/game-of-life-walkthrough/fork
-[visual-studio-code]: https://code.visualstudio.com
-[visual-studio-code-codespaces]: https://marketplace.visualstudio.com/items?itemName=GitHub.codespaces
-[youtube-video]: https://youtu.be/pGV_T6g1hcU
+本專案採用 MIT 授權 - 詳見 [LICENSE](LICENSE) 檔案
