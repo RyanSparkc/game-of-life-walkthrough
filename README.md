@@ -37,11 +37,11 @@ python -m http.server
 
 ## 專案結構
 
-.
+``` text
 ├── index.html      # 主要 HTML 檔案
 ├── styles.css      # 樣式定義
 ├── script.js       # 遊戲邏輯實作
-
+```
 
 ## 參與貢獻
 
