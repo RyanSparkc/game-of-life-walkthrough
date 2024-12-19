@@ -7,7 +7,7 @@ on:
 
 jobs:
   deploy:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
     permissions:
       contents: write
     
@@ -15,10 +15,12 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
+      - name: Build
+        run: npm run build
+
       - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+        uses: peaceiris/actions-gh-pages@v3.9.3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: .
-          # 添加以下設定來指定部署網址
-          cname: ${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}
+          publish_dir: ./dist    # Output directory
+          force_orphan: true     # Ensure clean deployment history
