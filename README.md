@@ -20,30 +20,28 @@
 
 ## 本地開發
 
-1. 克隆專案:
+-  克隆專案:
 
 ```bash
 git clone https://github.com/your-username/game-of-life-walkthrough.git
 ```
 
-2. 使用任何網頁伺服器啟動專案:
+- 使用任何網頁伺服器啟動專案:
 
 ```bash
 # 例如使用 Python 的簡易伺服器
 python -m http.server
 ```
 
-3. 瀏覽 `http://localhost:8000` 檢視結果
+- 瀏覽 `http://localhost:8000` 檢視結果
 
 ## 專案結構
 
-```
 .
 ├── index.html      # 主要 HTML 檔案
 ├── styles.css      # 樣式定義
 ├── script.js       # 遊戲邏輯實作
-└── docs/          # 專案文件
-```
+
 
 ## 參與貢獻
 

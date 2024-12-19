@@ -2,25 +2,40 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches:
-      - main
+    branches: [ "main" ]
+  
+  # 允許從 Actions 頁面手動觸發工作流程
+  workflow_dispatch:
+
+# 設定 GITHUB_TOKEN 權限
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# 允許一次只運行一個部署
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
 
 jobs:
   deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
-    
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
-
-      - name: Build
-        run: npm run build
-
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3.9.3
+      - name: Checkout
+        uses: actions/checkout@v4
+      
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+      
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v2
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist    # Output directory
-          force_orphan: true     # Ensure clean deployment history
+          path: '.'
+      
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v3
