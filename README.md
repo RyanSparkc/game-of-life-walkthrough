@@ -2,7 +2,7 @@
 
 這是一個使用 HTML5 Canvas 實作的康威生命遊戲。專案採用現代化的前端技術，並遵循良好的程式碼組織原則。
 
-[線上展示](https://your-username.github.io/game-of-life-walkthrough)
+[線上展示](https://ryansparkc.github.io/game-of-life-walkthrough/)
 
 ## 功能特色
 
